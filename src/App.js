@@ -1,22 +1,25 @@
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+
+
 function App() {
+
+  var num = 1;
+
+  function numUp(){
+    num = num + 1;
+    console.log(num);
+  }
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>{ num }</div>
+        <button onClick={() => {numUp()}}>버튼</button>
       </header>
     </div>
   );
